@@ -74,7 +74,13 @@ footer {
   height: 120px;
   width: 140px;
 }
-
+.navElem{
+  fill:#39add1
+}
+.navElem:hover{
+  fill: #ADD8E6;
+  color:#ADD8E6;
+}
 .wordsH1{
   font-size: 15px;
 }
