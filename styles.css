@@ -5,9 +5,6 @@ body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #111;
-  background: #edeff0;
-  background-image: url("svgs/background.svg");
-  background-size: repeat;
 }
 html,body{
   height:100%;
@@ -15,9 +12,8 @@ html,body{
 #container {
   max-width: 960px;
   background: #fff;
-  margin: auto;
-  margin-top: -80px;
-  min-height: 100%; /* new line */
+  margin: 60px;
+
 }
 
 p {
@@ -27,15 +23,13 @@ p {
   text-align: left;
 }
 
-a,li>span {
+ a {
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
 }
 
-a:hover {
-  color: #111;
-}
+
 
 header {
   padding-top: 10px;
@@ -79,12 +73,17 @@ footer {
   height: 120px;
   width: 140px;
 }
-.navElem{
+ li> .navElem,
+ li> a{
+  text-decoration: none;
+  font-weight: 700;
   fill:#39add1;
+  color:#39add1;
   margin: 5px;
-  transition: fill ;
+  transition: fill,color ;
 }
-.navElem:hover{
+ li:hover .navElem,
+ li:Hover a{
   fill: #ADD8E6;
   color:#ADD8E6;
 }
@@ -117,7 +116,7 @@ footer {
     transform: translate(0px, 5px);
 		-webkit-transform: translate(0px, 5px);
   }
-  100%{}
+  100%{  }
 }
 
 
@@ -126,9 +125,27 @@ footer {
   -webkit-animation: translate 1s linear ;
 }
 
-@media only screen and (min-width: 435px)  {
+@media only screen and (min-width: 425px)  {
   .words{
     visibility: visible;
   }
-
+  #container {
+    max-width: 960px;
+    background: #fff;
+    margin: auto;
+    margin-top: -80px;
+    min-height: 100%; /* new line */
   }
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #111;
+    background: #edeff0;
+    background-image: url("svgs/background.svg");
+    background-repeat: repeat;
+  }
+
+}
