@@ -9,12 +9,15 @@ body {
   background-image: url("svgs/background.svg");
   background-size: repeat;
 }
-
+html,body{
+  height:100%;
+}
 #container {
   max-width: 960px;
   background: #fff;
-  margin: 0 auto;
-  height: 100%; /* new line */
+  margin: auto;
+  margin-top: -80px;
+  min-height: 100%; /* new line */
 }
 
 p {
@@ -24,7 +27,7 @@ p {
   text-align: left;
 }
 
-a {
+a,li>span {
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
@@ -68,6 +71,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+  padding:15px;
+  width: 50%;
 }
 
 .logo{
@@ -75,24 +80,55 @@ footer {
   width: 140px;
 }
 .navElem{
-  fill:#39add1
+  fill:#39add1;
+  margin: 5px;
+  transition: fill ;
 }
 .navElem:hover{
   fill: #ADD8E6;
   color:#ADD8E6;
 }
-.wordsH1{
-  font-size: 15px;
-}
+
 .words{
   visibility: hidden;
 }
+.coat{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.coat-sable{
+  color:	#CD853F;
+}
+.coat-fawn{
+  color:#FFDEAD;
+}
+.coat-red{
+  color:#800000;
+}
+.coat-stone{
+  color:#52595F;
+}
+
+/* animations for paw-fingers */
+@keyframes translate {
+	0% { }
+	50% 	{
+    transform: translate(0px, 5px);
+		-webkit-transform: translate(0px, 5px);
+  }
+  100%{}
+}
+
+
+.logo:hover .paw{
+  animation: translate 1s linear ;
+  -webkit-animation: translate 1s linear ;
+}
+
 @media only screen and (min-width: 435px)  {
   .words{
     visibility: visible;
   }
-  .wordsH1{
-    display: none;
-    font-size: 15px;
-  }
+
   }
