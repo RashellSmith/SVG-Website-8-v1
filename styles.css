@@ -80,7 +80,7 @@ footer {
   fill:#39add1;
   color:#39add1;
   margin: 5px;
-  transition: fill,color ;
+  /* transition: fill,color ; */
 }
  li:hover .navElem,
  li:Hover a{
@@ -108,9 +108,11 @@ footer {
 .coat-stone{
   color:#52595F;
 }
-
-/* animations for paw-fingers */
-@keyframes translate {
+#logoH1{
+  visibility: visible;
+}
+ /* redundant */
+/* @keyframes translate {
 	0% { }
 	50% 	{
     transform: translate(0px, 5px);
@@ -123,11 +125,14 @@ footer {
 .logo:hover .paw{
   animation: translate 1s linear ;
   -webkit-animation: translate 1s linear ;
-}
+} */
 
 @media only screen and (min-width: 425px)  {
   .words{
     visibility: visible;
+  }
+  #logoH1{
+    display:none;
   }
   #container {
     max-width: 960px;
